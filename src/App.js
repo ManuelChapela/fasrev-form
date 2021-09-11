@@ -1,21 +1,24 @@
 import './App.css';
+import {useState} from 'react'
+import {Client} from './pages/Client'
+import {Admin} from './pages/Admin'
 
-function App() {
+export const App = () => {
+
+
+  const [data, setData] = useState([])
+
+  const dataFn = (name, mail, phone, question) => {
+     setData( [...data, {name: name, mail: mail, phone: phone, question: question}])
+  }
+
+  console.log('APP DATA', data);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Fasrev Form
-        </a>
-      </header>
+     <Client dataFn={dataFn}/>
+     <Admin data={data}/>
     </div>
   );
 }
