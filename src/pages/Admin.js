@@ -49,7 +49,7 @@ export const Admin = () => {
     return (
         <div className='admin__text'>
             <h1>Esta es la página de administrador.</h1>
-            <p>Desde aquí podrás responder una a una todas las peticiones que te hagan los usuarios. Al responderlas, les llegará un mensaje personalizado a su email con la respuesta.</p>
+            <p className='admin__text-paragraph'>Desde aquí podrás responder una a una todas las peticiones que te hagan los usuarios. Al responderlas, les llegará un mensaje personalizado a su email con la respuesta.</p>
             {form === false && (
                 <div>
                     {data.map((item, i) => (
@@ -60,23 +60,23 @@ export const Admin = () => {
             <div>
                 {form !== false && (
                     <div>
-                        <h2>RESPONDER FORMULARIO</h2>
-                        <div>
+                        <h3 className='admin__userInfo'>RESPONDER FORMULARIO</h3>
+                        <div className='admin__userInfo'>
                             <p>Nombre: {data[form].username}</p>
                             <p>Mail: {data[form].email}</p>
                             <p>Teléfono: {data[form].telephone}</p>
                             <p>Consulta: {data[form].textField}</p>
-                            <form>
+                            <form className="client__input-question">
                                 <textarea value={resp} onChange={handleOnChange} />
                             </form>
-                            <button onClick={handleSend}>Enviar</button>
-                            <button onClick={handleClose}>Cerrar</button>
+                            <button className='btn__general' onClick={handleSend}>Enviar</button>
+                            <button className='btn__general' onClick={handleClose}>Cerrar</button>
                         </div>
                     </div>
                 )}
             </div>
 
-            <button>
+            <button className='btn__general-alt'>
                 <Link className="" to="/">Ir a la home</Link>
             </button>
         </div>

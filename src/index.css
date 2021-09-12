@@ -31,21 +31,125 @@ body {
 .adminList__main{
   display: flex;
   flex-direction: column;
+  margin: 10px;
+}
+
+
+/* ------------------------------------------- ADMIN */
+.admin__text {
+  margin: 30px;
+}
+
+.admin__text p{
+  margin: 1px 0px;
+}
+
+.admin__userInfo{
+  margin: 20px 0px;
+}
+
+.admin__userInfo{
   margin: 20px;
 }
 
-.adminList__main button{
-  
+.admin__userInfo p{
+  margin: 10px
+}
+
+.admin__userInfo textarea{
+  width: 260px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.btn__general-alt{
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  border: solid black 1px;
+  color: black;
+  text-decoration: none;
+  background-color: rgb(240, 236, 231);
+}
+.btn__general-alt a{
+  background-color: rgb(240, 236, 231);
+  color: black;
+}
+
+.admin__text-paragraph{
+  padding: 15px;
+}
+
+
+/* ------------------------------------------- BTN GENERAL */
+.btn__general{
   width: 100px;
   height: 30px;
   margin: 10px;
   border: solid black 1px;
   background-color: rgb(82, 82, 82);
   color: white;
-  
+  text-decoration: none
 }
 
-/* ------------------------------------------- ADMIN */
-.admin__text {
+a {
+  text-decoration: none;
+  background-color: rgb(82, 82, 82);
+  color: white; 
+}
+
+
+
+/* ------------------------------------------- HOME*/
+
+.home{
+  position: fixed;
+  padding: 20px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.home__btns{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+
+
+/* ------------------------------------------- CLIENT*/
+.client__form{
   margin: 20px;
+}
+
+.client__form div{
+  margin: 15px;
+  font-weight: bold;
+}
+.client__form input{
+  width: 220px;
+  height: 30px;
+  border: solid black 1px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.client__input-question textarea{
+  height: 150px;
+  width: 220px;
+  border: solid black 1px;
+  margin: 5px;
+  padding: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  
 }

@@ -9,7 +9,7 @@ export const AdminList = ({ item, index, showForm }) => {
             <p>Nombre: {item.username}</p>
             <p>Mail: {item.email}</p>
             <p>
-                <button onClick={onClickHandler}>Responder</button>
+                <button className='btn__general' onClick={onClickHandler}>Responder</button>
             </p>
         </div>
     );

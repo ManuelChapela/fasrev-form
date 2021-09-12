@@ -46,12 +46,12 @@ export const Client = () => {
 
     return (
 
-        <>
+        <div className='admin__text'>
 
             <h1>Esta es la página de cliente</h1>
-            <p>Escribe todos los campos y en cuanto puedas te responderemos</p>
+            <p className='admin__text-paragraph'>Escribe todos los campos y en cuanto puedas te responderemos</p>
 
-            <form action="">
+            <form action="" className='client__form'>
                 <div className="client__input-name">
                     <p>Nombre</p>
                     <input type="text" onChange={handleName} value={name} />
@@ -69,15 +69,17 @@ export const Client = () => {
 
                 <div className="client__input-question">
                     <p>Consulta</p>
-                    <input type="text" onChange={handleQuestion} value={question} />
+                    <textarea name="" id="" cols="30" rows="10" onChange={handleQuestion} value={question}></textarea>
+                    {/* <input type="text" onChange={handleQuestion} value={question} /> */}
                 </div>
             </form>
-                <button onClick={handleSubmit}>Enviar</button>
 
-            <button>
+                <button className='btn__general'onClick={handleSubmit}>Enviar</button>
+
+            <button className='btn__general-alt'>
                 <Link className="" to="/">Ir a la home</Link>
             </button>
-        </>
+        </div>
 
 )
 }
