@@ -1,21 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-export const AdminList = ({item, index, key}) => {
-
-    console.log('AAAAA', item);
-
-
-    return(
-        <>
-
-        <ol>
-            <li>Nombre: {item[index].name}</li>
-            <li>Mail: {item[index].mail}</li>
-            <li>Teléfono: {item[index].phone}</li>
-            <li>Consulta: {item[index].question}</li>
-            <li>ID: {item[index].mail}</li>
-        </ol>
-        </>
-
-    )
-}
+export const AdminList = ({ item, index, showForm }) => {
+    const onClickHandler = () => {
+        showForm(index);
+    };
+    return (
+        <div className='adminList__main'>
+            <p>Nombre: {item.username}</p>
+            <p>Mail: {item.email}</p>
+            <p>
+                <button onClick={onClickHandler}>Responder</button>
+            </p>
+        </div>
+    );
+};

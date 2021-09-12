@@ -1,3 +1,19 @@
+* {
+  background-color: rgb(240, 236, 231);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} 
+
+body {
+  font-size: 100%;
+}
+
+input:focus{
+	outline:0px;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +23,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+
+/* ------------------------------------------- ADMIN LIST  */
+
+.adminList__main{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.adminList__main button{
+  
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  border: solid black 1px;
+  background-color: rgb(82, 82, 82);
+  color: white;
+  
+}
+
+/* ------------------------------------------- ADMIN */
+.admin__text {
+  margin: 20px;
 }

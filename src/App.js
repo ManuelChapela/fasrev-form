@@ -1,26 +1,33 @@
 import './App.css';
-import {useState} from 'react'
-import {Client} from './pages/Client'
-import {Admin} from './pages/Admin'
+import { Client } from './pages/Client';
+import { Admin } from './pages/Admin';
+import { Home } from './pages/Home';
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 export const App = () => {
+    return (
+        <div className="App">
+            <Router>
+              <Switch>
 
+                <Route  exact path="/">
+                  <Home />
+                </Route>
 
-  const [data, setData] = useState([])
+                <Route  path="/client">
+                  <Client />
+                </Route>
 
-  const dataFn = (name, mail, phone, question) => {
-     setData( [...data, {name: name, mail: mail, phone: phone, question: question}])
-  }
+                <Route  path="/admin">
+                  <Admin />
+                </Route>
 
-  console.log('APP DATA', data);
-
-
-  return (
-    <div className="App">
-     <Client dataFn={dataFn}/>
-     <Admin data={data}/>
-    </div>
-  );
-}
+              </Switch>
+            </Router>
+        </div>
+    );
+};
 
 export default App;
